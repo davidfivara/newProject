@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Registration/Login Page -->
+    <div id="auth-container" class="container">
+        <h1>Welcome</h1>
+        <div id="register-section" class="auth-section">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Enter Username" required>
+            <input type="password" id="register-password" placeholder="Enter Password" required>
+            <button id="register-button">Register</button>
+            <p>Already have an account? <a href="#" id="to-login">Login here</a></p>
+        </div>
+        <div id="login-section" class="auth-section hidden">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Enter Username" required>
+            <input type="password" id="login-password" placeholder="Enter Password" required>
+            <button id="login-button">Login</button>
+            <p>Don't have an account? <a href="#" id="to-register">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard-container" class="container hidden">
+        <h1>Inventory Dashboard</h1>
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Product Name" required>
+            <input type="text" id="product-id" placeholder="Product ID" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <input type="date" id="expiry-date" required>
+            <input type="number" id="quantity" placeholder="Quantity" required>
+            <button type="button" id="add-product">Add Product</button>
+        </form>
+        <h3>Product List</h3>
+        <ul id="product-list"></ul>
+        <button id="logout-button">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
